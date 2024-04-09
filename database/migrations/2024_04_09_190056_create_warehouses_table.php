@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('warehouses', function (Blueprint $table) {
+        Schema::create('warehouse', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->boolean('refrigerated')->default(false);
             $table->timestamps();
         });
     }

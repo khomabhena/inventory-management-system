@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('stocks', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('products_id');
+            $table->foreignId('inventories_id');
+            $table->string('barcode');
             $table->timestamps();
         });
     }
